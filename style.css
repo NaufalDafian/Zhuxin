@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    color: white;
+    background-color: black;
+    overflow-x: hidden; /* Mencegah scroll horizontal yang merusak layout */
+}
+
+/* Background Image Utama */
+.body-bg-image {
+    position: fixed; /* Diubah ke fixed agar tetap di belakang saat di-scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.5); 
+    image-rendering: -webkit-optimize-contrast;
+    object-position: center 8%;
+}
+
+/* SECTION 1: HERO */
+.hero {
+    min-height: 100vh;
+    padding: 20px; /* Padding fleksibel untuk mobile */
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Modern & Responsif */
+nav {
+    display: flex;
+    flex-direction: column; /* Vertikal di mobile */
+    gap: 15px;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4); /* Beri sedikit background transparan di mobile */
+    padding: 15px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.search-bar {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+}
+
+.search-bar input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1.5px solid #ffffff;
+    border-radius: 20px;
+    padding: 8px 40px 8px 15px;
+    color: white;
+    outline: none;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    color: #ffffff;
+    transform: translateY(-50%);
+    font-size: 18px;
+    right: 20px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Supaya menu turun ke bawah kalau layar kekecilan */
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+}
+
+nav ul li a {
+    font-family: 'Lemon', serif;
+    font-size: 16px; /* Ukuran lebih bersahabat untuk mobile */
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+/* Hero Content Layout */
+.hero-content {
+    display: flex;
+    flex-direction: column-reverse; /* Gambar di atas, teks di bawah saat mobile */
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-family: 'Lemon', serif;
+    font-size: 2.2rem; /* Menggunakan rem agar fleksibel */
+    color: #ff80ab;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text p {
+    max-width: 500px;
+    margin: 15px auto;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.btn-get-started {
+    background: #ff80ab;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+/* Menghilangkan posisi minus yang merusak layout */
+.hero-card {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.hero-card img {
+    width: 100%;
+    max-width: 240px; /* Batasi ukuran maksimal di mobile */
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    box-shadow: 3px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* SECTION 2: FEATURES */
+.features {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url('images/mi-min-pkpqoBp11Jc-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-container {
+    display: flex;
+    flex-direction: column; /* Vertikal berderet ke bawah di mobile */
+    gap: 40px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.card {
+    width: 100%;
+    text-align: center;
+}
+
+.img-box img {
+    width: 100%;
+    max-width: 350px; /* Biar gambar fitur tidak terlalu raksasa di mobile */
+    border-radius: 15px;
+    border: 2px solid white;
+    margin-bottom: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #ffffff;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* SECTION 3: STORY / SLIDER */
+.story-slider {
+    position: relative;
+    height: 70vh; /* Dikurangi sedikit agar proporsional di mobile */
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.story-content {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    z-index: 5;
+}
+
+.story-content h2 {
+    font-family: 'Lemon', serif;
+    font-size: 20px;
+    color: #ff80ab;
+    margin-bottom: 8px;
+}
+
+.story-content p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.slider-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+.indicator.active {
+    background: #ff80ab;
+    width: 25px;
+    border-radius: 10px;
+}
+
+
+/* ==========================================
+   BREAKPOINT: DESKTOP (Layar Lebar > 992px)
+   ========================================== */
+@media (min-width: 992px) {
+    .hero {
+        padding: 30px 80px;
+    }
+
+    nav {
+        flex-direction: row; /* Kembali horizontal */
+        justify-content: space-between;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 10px 40px;
+        border-radius: 50px;
+    }
+
+    .search-bar {
+        width: 200px;
+    }
+
+    .search-bar input {
+        background: rgba(255, 255, 255, 0);
+        border: 1.5px solid #000000;
+        color: white;
+    }
+
+    .search-icon {
+        color: #000000;
+    }
+
+    nav ul {
+        gap: 30px;
+    }
+
+    nav ul li a {
+        font-size: 21px;
+    }
+
+    .hero-content {
+        flex-direction: row; /* Teks kiri, gambar kanan */
+        text-align: left;
+        gap: 40px;
+        margin-top: 50px;
+    }
+
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-text p {
+        margin: 20px 0;
+    }
+
+    .btn-get-started {
+        margin: 0;
+    }
+
+    .hero-card img {
+        max-width: 275px;
+    }
+
+    /* Features Desktop */
+    .feature-container {
+        flex-direction: row; /* Kartu berjejer ke samping */
+        gap: 30px;
+    }
+
+    /* Story Slider Desktop */
+    .story-slider {
+        height: 90vh;
+    }
+
+    .story-content {
+        bottom: 50px;
+        padding: 30px;
+        width: 80%;
+        max-width: 700px;
+    }
+
+    .story-content h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .story-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhuxin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icons/Zhuxin mlbb.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+
+<body class="background">
+
+    <img src="images/dde7f1277af80fad8fb1b5f2154aa699.jpg" class="body-bg-image" alt="Background">
+    <!-- SECTION 1: HERO -->
+    <section class="hero">
+        <nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <iconify-icon icon="flowbite:search-outline" class="search-icon"></iconify-icon>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+            <div class="logo">
+                <img src="icons/Zhuxin mlbb.png" alt="Logo">
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hasil Karya<br> Naufal Dafiansyah.</h1>
+                <p>Ini rill hasil buatan tangan Naufal Dafiansyah tanpa rekayasa dan
+                    buat yang mau stiker zhuxin lucu bisa pencet tombol ini yaa.</p>
+                <a href="files/Sticker-zhuxin-lucu.zip" download="Sticker-zhuxin-lucu.zip" style="text-decoration: none;">
+                    <button class="btn-get-started">Click here! </button>
+                </a>
+            </div>
+            <div class="hero-card">
+                <img src="images/zhuxin starlight.jpg" alt="Character">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: FEATURES -->
+    <section class="features">
+        <div class="feature-container">
+            <div class="card">
+                <div class="img-box"><img
+                        src="images/MLBB - Zhuxin New Golden Month Skin SurveyTheres a Golden Month 2027 Version 1. Ukhti 2. Naugh (1).webp"
+                        alt="icon"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum.</p>
+            </div>
+            <div class="card">
+                <div class="img-box"><img
+                        src="images/MLBB - Zhuxin New Golden Month Skin SurveyTheres a Golden Month 2027 Version 1. Ukhti 2. Naugh (2).webp"
+                        alt="icon"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum.</p>
+            </div>
+            <div class="card">
+                <div class="img-box"><img
+                        src="images/MLBB - Zhuxin New Golden Month Skin SurveyTheres a Golden Month 2027 Version 1. Ukhti 2. Naugh.webp"
+                        alt="icon"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: STORY / FOOTER -->
+    <section class="story-slider">
+        <button class="slide-btn prev" onclick="moveslide(-1)">❮</button>
+        <button class="slide-btn next" onclick="moveslide(1)">❯</button>
+        <div class="slider-container" id="mainSlider">
+            <div class="slide">
+                <img src="images/A_Wish_p1.webp">
+            </div>
+            <div class="slide">
+                <img src="images/zx-slider.jpg">
+            </div>
+            <div class="slide">
+                <img src="images/zx-slider0.jpg">
+            </div>
+        </div>
+        <div class="story-content">
+            <h2>My Kisah...</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac
+                aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+
+            <div class="slider-indicators">
+                <div class="indicator active" onclick="goToSlide(0)"></div>
+                <div class="indicator" onclick="goToSlide(1)"></div>
+                <div class="indicator" onclick="goToSlide(2)"></div>
+            </div>
+            
+    <script src="script.js"></script>
+</body>
+
+</html>
